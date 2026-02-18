@@ -1,0 +1,41 @@
+# ── EduAgent AI — Backend Requirements ──────────────────
+# Install: pip install -r requirements.txt
+
+# LLM + Orchestration
+langchain==0.1.20
+langchain-core==0.1.52
+langgraph==0.0.53
+langchain-groq==0.1.3
+langchain-openai==0.1.6
+
+# FastAPI
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+
+# PDF processing
+PyMuPDF==1.23.26
+reportlab==4.1.0
+
+# OCR
+easyocr==1.7.1
+pytesseract==0.3.10
+Pillow==10.2.0
+opencv-python-headless==4.9.0.80
+
+# Data / ML
+pandas==2.0.3
+numpy==1.26.4
+networkx==3.2.1
+scikit-learn==1.4.0
+
+# Utils
+pydantic==2.6.1
+python-dotenv==1.0.0
+
+# Testing
+pytest==8.0.0
+pytest-cov==4.1.0
+pytest-asyncio==0.23.5
+httpx==0.27.0           # for async FastAPI testing
+ruff==0.3.0             # linting
