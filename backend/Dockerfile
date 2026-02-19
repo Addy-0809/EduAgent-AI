@@ -2,19 +2,28 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# System deps for OCR
-RUN apt-get update && apt-get install -y \
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
     tesseract-ocr \
-    libgl1 \
+    tesseract-ocr-eng \
+    libgl1-mesa-glx \
     libglib2.0-0 \
+    build-essential \
+    wget \
     && rm -rf /var/lib/apt/lists/*
 
+# Copy requirements
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
+# Install Python packages with retries
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir --default-timeout=100 -r requirements.txt || \
+    (sleep 5 && pip install --no-cache-dir --default-timeout=100 -r requirements.txt)
+
+# Copy application
 COPY . .
 
-# Create data dirs
+# Create directories
 RUN mkdir -p data/uploads data/mock_pdfs
 
 EXPOSE 8000
