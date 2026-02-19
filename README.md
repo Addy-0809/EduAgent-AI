@@ -2,7 +2,7 @@
 
 > **Intelligent Adaptive Learning Framework** — Upload exam papers · Generate mock papers · Submit handwritten answers · Get AI-graded results with personalised feedback.
 
-[![CI / CD](https://github.com/YOUR_USERNAME/EduAgent-AI/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/EduAgent-AI/actions)
+[![CI / CD Pipeline](https://github.com/Addy-0809/EduAgent-AI/actions/workflows/ci.yml/badge.svg)](https://github.com/Addy-0809/EduAgent-AI/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://react.dev)
